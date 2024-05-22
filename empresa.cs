@@ -96,7 +96,7 @@ namespace EspacioEmpresa
     }
 }
 
-partial class Program
+/*partial class Program
 {
     public static void Main()
     {
@@ -120,5 +120,5 @@ partial class Program
         }
 
     }
-}
+}*/
 

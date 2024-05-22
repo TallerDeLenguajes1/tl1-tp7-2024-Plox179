@@ -1,4 +1,5 @@
 ﻿using EspacioCalculadora;
+using EspacioEmpresa;
 
 Calculadora calculadora = new Calculadora();
 
@@ -48,6 +49,30 @@ do
 
 
 } while (operacion != 6);
+
+Empleado[] empleados = new Empleado[3];
+
+empleados[0] = new Empleado("Aureliano", "Buendia", new DateTime(1998, 10, 19), 'S', new DateTime(2019, 7, 24), 650000, Cargos.Investigador);
+empleados[1] = new Empleado("Elisa Beatriz", "Bachofen", new DateTime(1976, 11, 19), 'C', new DateTime(1997, 9, 14), 900000, Cargos.Ingeniera);
+empleados[2] = new Empleado("Nana", "Osaki", new DateTime(1981, 3, 5), 'C', new DateTime(2001, 12, 17), 777777, Cargos.Especialista);
+
+// Escribe los datos de los 3 empleados, lo use para chequear si se cargaban los datos correctamente
+Console.WriteLine("Datos de los empleados:");
+foreach (Empleado empleado in empleados)
+{
+    Console.WriteLine($"Nombre: {empleado.Nombre}");
+    Console.WriteLine($"Apellido: {empleado.Apellido}");
+    Console.WriteLine($"Fecha de Nacimiento: {empleado.FechaNac.ToShortDateString()}");
+    Console.WriteLine($"Estado Civil: {empleado.EstadoCivil}");
+    Console.WriteLine($"Fecha de Ingreso: {empleado.FechaIng.ToShortDateString()}");
+    Console.WriteLine($"Sueldo Básico: {empleado.SueldoBasico:C}");
+    Console.WriteLine($"Cargo: {empleado.Cargo}");
+    Console.WriteLine();
+}
+
+
+
+
 
 
 
